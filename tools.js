@@ -1,5 +1,25 @@
+let pencil = document.querySelector("#pencil")
+let ereaser = document.querySelector("#ereaser")
 let undo = document.querySelector("#undo")
 let redo = document.querySelector("#redo")
+
+ctx.lineWidth = 20;
+
+pencil.addEventListener('click',function(){
+    if(!pencil.classList.contains("active-tool")){
+        ereaser.classList.remove("active-tool")
+        pencil.classList.add("active-tool")
+        ctx.strokeStyle = "black";
+    }
+})
+
+ereaser.addEventListener('click', function(){
+    if(!ereaser.classList.contains("active-tool")){
+        pencil.classList.remove("active-tool")
+        ereaser.classList.add("active-tool")
+        ctx.strokeStyle = "white";
+    }
+})
 
 
 undo.addEventListener('click', function(){

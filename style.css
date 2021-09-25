@@ -7,7 +7,7 @@ body, html{
 }
 
 .tools{
-    background-color: rgba(4, 11, 109, 0.822);
+    background-color: rgba(240, 240, 250, 0.822);
     height: 100px;
     display: flex;
     align-items: center;
@@ -31,9 +31,57 @@ body, html{
 
 .tool{
     height: 50px;
+    position: relative;
 }
 
 .tool img{
     height: 100%;
+}
+
+.pencil-colours div{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+}
+.pencil-colours{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.red{
+    background: red;
+}
+.blue{
+    background: blue;
+}
+.yellow{
+    background: yellow;
+}
+.black{
+    background: black;
+}
+.tool-options{
+    height: 100px;
+    width: 160px;
+    position: absolute;
+    background: rgb(238, 232, 205);
+    border-radius: 10px;
+    top: 60px;
+    left: -65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
+
+.active-tool {
+    background: rgb(206, 207, 218);
+    border-radius: 20px;
+    height: 70px;
+    padding: 10px;
 }
 
