@@ -16,20 +16,22 @@ undo.addEventListener('click', function(){
 });
 
 redo.addEventListener('click',function(){
-    let topLine = redoStack.pop();
-    if(topLine.length)
-        pointsDB.push(topLine)
-    if(topLine.length > 0){
-        for(let i=0; i<topLine.length; i++){
-            let x = topLine[i].x;
-            let y = topLine[i].y;
-            
-            if(topLine[i].id == "md"){
-                ctx.beginPath();
-                ctx.moveTo(x,y);
-            }else{
-                ctx.lineTo(x,y);
-                ctx.stroke();
+    if(redoStack.length){
+        let topLine = redoStack.pop();
+        if(topLine.length)
+            pointsDB.push(topLine)
+        if(topLine.length > 0){
+            for(let i=0; i<topLine.length; i++){
+                let x = topLine[i].x;
+                let y = topLine[i].y;
+                
+                if(topLine[i].id == "md"){
+                    ctx.beginPath();
+                    ctx.moveTo(x,y);
+                }else{
+                    ctx.lineTo(x,y);
+                    ctx.stroke();
+                }
             }
         }
     }
