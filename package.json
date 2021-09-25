@@ -1,0 +1,15 @@
+{
+  "name": "whiteboard_electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Mahesh kumar",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^15.0.0"
+  }
+}

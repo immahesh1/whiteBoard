@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0px;
+}
+
+.tools{
+    background-color: rgba(4, 11, 109, 0.822);
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    height: calc(100vh - 100px);
+    background-color: white;
+}
+
+#canvas{
+    height: 100%;
+    width: 100%;
+}
+
+.toolbox{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.tool{
+    height: 50px;
+}
+
+.tool img{
+    height: 100%;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tools">
+        <div class="toolbox">
+            <div class="tool">
+                <img src="./icons/pencil.png" alt="" srcset="">
+            </div>
+            <div class="tool">
+                <img src="./icons/eraser.png" alt="" srcset="">
+            </div>
+            <div class="tool">
+                <img src="./icons/Note-icon.png" alt="" srcset="">
+            </div>
+            <div class="tool">
+                <img src="./icons/image.png" alt="" srcset="">
+            </div>
+            <div class="tool">
+                <img src="./icons/download.png" alt="" srcset="">
+            </div>
+            <div class="tool" id="undo">
+                <img src="./icons/undo.png" alt="" srcset="">
+            </div>
+            <div class="tool" id="redo">
+                <img src="./icons/redo.png" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <canvas id="canvas"></canvas>
+    </div>
+</body>
+
+<script src="./script.js"></script>
+<script src="./tools.js"></script> <!--is file ke upar ek aur js file hain to canvas lane ki jrurt nhi he is file me-->
+
+<!-- <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'green';
+    // ctx.fillRect(10, 10, 150, 100);
+
+    ctx.beginPath();
+    ctx.moveTo(10,10);
+    ctx.lineTo(100,90);
+    ctx.stroke();
+    ctx.moveTo(101,90);
+    ctx.lineTo(190,333);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(200,200);
+    ctx.lineTo(10,10);
+    ctx.stroke();
+</script> -->
+</html>
