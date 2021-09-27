@@ -29,7 +29,9 @@ canvas.addEventListener("mousedown", function(e){
     let point = {
         id : "md",
         x : x,
-        y : y
+        y : y,
+        strokeStyle : ctx.strokeStyle,
+        lineWidth : ctx.lineWidth
     }
     line.push(point);
 })
@@ -43,7 +45,9 @@ canvas.addEventListener("mousemove", function(e){
         let point = {
             id : "mm",
             x : x,
-            y : y
+            y : y,
+            strokeStyle : ctx.strokeStyle,
+            lineWidth : ctx.lineWidth
         }
         line.push(point);
     }

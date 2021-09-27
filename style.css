@@ -66,8 +66,8 @@ body, html{
     position: absolute;
     background: rgb(238, 232, 205);
     border-radius: 10px;
-    top: 60px;
-    left: -65px;
+    top: 71px;
+    left: -50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
