@@ -25,6 +25,14 @@ for(let i=0; i<pencilColor.length; i++){
     })
 }
 
+// sticky_notes.addEventListener('click', function(){
+//     if(sticky.classList.contains("hide")){
+//         sticky.classList.remove("hide")
+//     }else{
+//         sticky.classList.add("hide")
+//     }
+// })
+
 // global variable for size of pencil and eraser
 let pencilWidth = 1
 let eraserWidth = 1
