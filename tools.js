@@ -25,14 +25,6 @@ for(let i=0; i<pencilColor.length; i++){
     })
 }
 
-// sticky_notes.addEventListener('click', function(){
-//     if(sticky.classList.contains("hide")){
-//         sticky.classList.remove("hide")
-//     }else{
-//         sticky.classList.add("hide")
-//     }
-// })
-
 // global variable for size of pencil and eraser
 let pencilWidth = 1
 let eraserWidth = 1
@@ -49,7 +41,7 @@ eraserSize.addEventListener('change', function(e){
     ctx.lineWidth = eraserWidth
 })
 
-let activeTool = 'pencil'
+// let activeTool = 'pencil'
 
 
 // clear full screen
@@ -60,12 +52,12 @@ clear.addEventListener('click',function(){
 
 pencil.addEventListener('click',function(){
     if(!pencil.classList.contains("active-tool")){ //1st click : activate if not
-        eraserOptions.classList.add("hide")
         eraser.classList.remove("active-tool")
+        eraserOptions.classList.add("hide")
         pencil.classList.add("active-tool")
         ctx.strokeStyle = "black";
-        ctx.lineWidth = pencilWidth
-    }else if(pencilOptions.classList.contains("hide")){ // 2md click : if options hidden, unhide it
+        ctx.lineWidth = pencilWidth;
+    }else if(pencilOptions.classList.contains("hide")){ // 2nd click : if options hidden, unhide it
         pencilOptions.classList.remove("hide")
     }else{ // 3rd click : hide options
         pencilOptions.classList.add("hide")
@@ -74,11 +66,11 @@ pencil.addEventListener('click',function(){
 
 eraser.addEventListener('click', function(){
     if(!eraser.classList.contains("active-tool")){
-        pencilOptions.classList.add("hide")
         pencil.classList.remove("active-tool")
+        pencilOptions.classList.add("hide")
         eraser.classList.add("active-tool")
         ctx.strokeStyle = "white";
-        ctx.lineWidth = eraserWidth
+        ctx.lineWidth = eraserWidth;
     }else if(eraserOptions.classList.contains("hide")){
         eraserOptions.classList.remove("hide")
     }else{
@@ -95,7 +87,7 @@ undo.addEventListener('click', function(){
         redoStack.push(lastLine);
         // 2. clear the canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.lineWidth = pencilWidth
+        ctx.lineWidth = lastLine.lineWidth
         // 3. draw rest of the lines
         drawPoints();
     }
@@ -133,7 +125,7 @@ function drawPoints(){
                 let x = line[j].x;
                 let y = line[j].y;
                 ctx.strokeStyle = line[j].strokeStyle
-                ctx.lineWidht = line[j].lineWidht
+                ctx.lineWidth = line[j].lineWidth
                 if(line[j].id == 'md'){
                     ctx.beginPath();
                     ctx.moveTo(x,y);

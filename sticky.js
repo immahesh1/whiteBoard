@@ -29,7 +29,45 @@ stickyAdd.addEventListener('click', function(){
     sticky.appendChild(stickyHeader)
     sticky.appendChild(stickyContent)
 
-    document.body.appendChild(sticky)
+    document.body.appendChild(sticky);
+
+
+    // sticky moves
+
+    let initialX;
+    let initialY;
+    let isStickyHold = false;
+
+    stickyHeader.addEventListener('mousedown', function(e){
+        isStickyHold = true;
+        initialX = e.clientX;
+        initialY = e.clientY
+    })
+
+    stickyHeader.addEventListener('mousemove', function(e){
+        if(isStickyHold){
+            let finalX = e.clientX;
+            let finalY = e.clientY;
+
+            let dy = finalY - initialY;
+            let dx = finalX - initialX;
+
+            let {top, left} = sticky.getBoundingClientRect();
+
+            sticky.style.top = top + dy + "px";
+            sticky.style.left = left + dx + "px";
+
+            initialX = finalX;
+            initialY = finalY;
+            // console.log(initialX);
+            // console.log(initialY);
+            // console.log(isStickyHold);
+        }
+    })
+
+    stickyHeader.addEventListener('mouseup', function(e){
+        isStickyHold = false;
+    })
 
 
     minimize.addEventListener('click', function(){

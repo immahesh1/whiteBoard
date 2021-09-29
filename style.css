@@ -88,7 +88,7 @@ body, html{
 .sticky{
     position: absolute;
     top: 50%;
-    right: 50%;
+    left: 25%;
     height: 200px;
     width: 264px;
 }
