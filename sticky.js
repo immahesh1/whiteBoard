@@ -1,5 +1,6 @@
 let stickyAdd = document.querySelector("#sticky-notes")
 
+
 stickyAdd.addEventListener('click', function(){
     let sticky = document.createElement("div");
     sticky.classList.add("sticky")
@@ -18,7 +19,7 @@ stickyAdd.addEventListener('click', function(){
     stickyContent.classList.add("sticky-content")
 
     let textBox = document.createElement("textarea")
-    textBox.setAttribute("id", "stickybox")
+    textBox.setAttribute("class", "stickybox")
     textBox.setAttribute("rows", "10")
     textBox.setAttribute("cols", "30")
 
@@ -29,4 +30,13 @@ stickyAdd.addEventListener('click', function(){
     sticky.appendChild(stickyContent)
 
     document.body.appendChild(sticky)
+
+
+    minimize.addEventListener('click', function(){
+        textBox.style.display = textBox.style.display == "none" ? "block" : "none";
+    })
+
+    close.addEventListener('click', function(){
+        sticky.remove();
+    })
 })

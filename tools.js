@@ -95,6 +95,7 @@ undo.addEventListener('click', function(){
         redoStack.push(lastLine);
         // 2. clear the canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.lineWidth = pencilWidth
         // 3. draw rest of the lines
         drawPoints();
     }
@@ -110,7 +111,8 @@ redo.addEventListener('click',function(){
                 let x = topLine[i].x;
                 let y = topLine[i].y;
                 ctx.strokeStyle = topLine[i].strokeStyle
-                ctx.lineWidht = topLine[i].lineWidht
+                ctx.lineWidth = topLine[i].lineWidth;
+                // ctx.line
                 if(topLine[i].id == "md"){
                     ctx.beginPath();
                     ctx.moveTo(x,y);

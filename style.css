@@ -90,20 +90,20 @@ body, html{
     top: 50%;
     right: 50%;
     height: 200px;
-    border: 1px solid lightgray;
+    width: 264px;
 }
 
 .sticky-header {
     background: navajowhite;
     height: 35px;
-    width: 264px;
+    width: 100%;
     display: flex;
     align-items: center;
     border: 1px solid rgb(241, 163, 163);
 }
 
 .sticky-content{
-
+    
 }
 
 .minimize {
@@ -122,7 +122,9 @@ body, html{
     border-radius: 10px;
 }
 
-#stickybox{
-    outline: none;
+.stickybox{
+    /* outline: none; */
     border: none;
+    border: 1px solid lightgray;
+    background-color: rgb(241 219 219);
 }
