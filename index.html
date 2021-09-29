@@ -31,10 +31,11 @@
             <div class="tool" id="sticky-notes">
                 <img src="./icons/Note-icon.png" alt="" srcset="">
             </div>
-            <div class="tool">
+            <div class="tool" id="upload">
                 <img src="./icons/photo.png" alt="" srcset="">
+                <input type="file" src="" alt="" id="photo-upload" style="display: none;">
             </div>
-            <div class="tool">
+            <div class="tool" id="download">
                 <img src="./icons/download.png" alt="" srcset="">
             </div>
             <div class="tool" id="undo">
@@ -56,6 +57,8 @@
 <script src="./script.js"></script>
 <script src="./tools.js"></script> <!--is file ke upar ek aur js file hain to canvas lane ki jrurt nhi he is file me-->
 <script src="./sticky.js"></script>
+<script src="./img.js"></script>
+<script src="./createSticky.js"></script>
 <!-- <script>
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');

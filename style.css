@@ -102,9 +102,9 @@ body, html{
     border: 1px solid rgb(241, 163, 163);
 }
 
-.sticky-content{
+/* .sticky-content{
     
-}
+} */
 
 .minimize {
     height: 20px;
@@ -127,4 +127,10 @@ body, html{
     border: none;
     border: 1px solid lightgray;
     background-color: rgb(241 219 219);
+}
+
+#image-id{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
